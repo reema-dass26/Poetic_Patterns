@@ -1,0 +1,8 @@
+streamlit
+textblob
+matplotlib
+nltk
+pronouncing
+scikit-learn
+ace_tools
+pandas
