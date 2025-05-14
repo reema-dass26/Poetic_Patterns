@@ -45,7 +45,6 @@ dist/
 .idea/
 
 # User data
-*.csv
 *.tsv
 *.xlsx
 src/preprocessing/data_cleaned/*.csv
