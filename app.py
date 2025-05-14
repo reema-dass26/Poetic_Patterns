@@ -31,7 +31,7 @@ st.markdown("### 🪶 Analyze emotions, structure, and style in your writing.")
 
 DATA_PATH =  "src/preprocessing/data_cleaned/full_labeled_poetry_dataset.csv"
 
-MODEL_DIR = "src/Code/bert_emotion_model"
+# MODEL_DIR = "src/Code/bert_emotion_model"
 
 # --- Load Dataset ---
 if os.path.exists(DATA_PATH):
@@ -41,10 +41,17 @@ else:
     st.warning("Poem dataset not found!")
 
 # --- Load Emotion Classifier ---
+# @st.cache_resource
+# def load_emotion_classifier():
+#     model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
+#     tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
+#     return pipeline("text-classification", model=model, tokenizer=tokenizer, top_k=3)
+
 @st.cache_resource
 def load_emotion_classifier():
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
+    model_name = "j-hartmann/emotion-english-distilroberta-base"  # ✅ this is a valid Hugging Face model
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     return pipeline("text-classification", model=model, tokenizer=tokenizer, top_k=3)
 
 emotion_classifier = load_emotion_classifier()
