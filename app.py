@@ -11,6 +11,23 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassifica
 # --- CONFIG ---
 st.set_page_config(page_title="Poetic Patterns", layout="wide")
 st.title("Poetic Patterns – v0.5")
+with st.expander("ℹ️ What is *Poetic Patterns*?", expanded=True):
+    st.markdown("""
+    **Poetic Patterns** is an interactive tool for analyzing the emotional and stylistic layers of poetry.
+
+    🧠 **Core Features**:
+    - **Emotion detection** powered by a fine-tuned BERT model
+    - **Line-by-line emotion breakdown**
+    - **Emotional complexity score** to capture nuance and emotional richness
+    - **Emotional landscape plot** that visually distinguishes positive vs negative lines
+    - **Similarity search** to find poems with a similar emotional and stylistic vibe
+
+    🛡️ The app also includes built-in checks for emotionally distressing content and flags them for user safety.
+
+    ---
+    📌 Paste your own poem or written thoughts below to explore their emotional fingerprint.
+    """)
+st.markdown("### 🪶 Analyze emotions, structure, and style in your writing.")
 
 DATA_PATH =  "src/preprocessing/data_cleaned/full_labeled_poetry_dataset.csv"
 
