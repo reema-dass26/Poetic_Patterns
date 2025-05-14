@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+.env.bak/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MacOS/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs and outputs
+*.log
+*.out
+*.tmp
+
+# Model cache directories
+transformers_cache/
+torch_cache/
+datasets_cache/
+.huggingface/
+
+# Local saved models (if not versioned intentionally)
+src/Code/bert_emotion_model/
+*.joblib
+
+# Streamlit specific
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# User data
+*.csv
+*.tsv
+*.xlsx
+src/preprocessing/data_cleaned/*.csv
+
+# Reports/plots if generated
+*.pdf
+*.png
+*.svg
+*.jpg
+
+# Misc
+*.bak
