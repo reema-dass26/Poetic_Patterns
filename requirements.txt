@@ -6,3 +6,4 @@ pronouncing
 scikit-learn
 ace_tools
 pandas
+transformers 
