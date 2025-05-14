@@ -29,7 +29,7 @@ with st.expander("ℹ️ What is *Poetic Patterns*?", expanded=True):
     """)
 st.markdown("### 🪶 Analyze emotions, structure, and style in your writing.")
 
-DATA_PATH =  "src/preprocessing/data_cleaned/full_labeled_poetry_dataset.csv"
+DATA_PATH =  "src/preprocessing/full_labeled_poetry_dataset.csv"
 
 # MODEL_DIR = "src/Code/bert_emotion_model"
 
