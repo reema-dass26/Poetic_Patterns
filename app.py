@@ -12,8 +12,9 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassifica
 st.set_page_config(page_title="Poetic Patterns", layout="wide")
 st.title("Poetic Patterns – v0.5")
 
-DATA_PATH = os.path.join("src", "preprocessing", "data_cleaned", "full_labeled_poetry_dataset.csv")
-MODEL_DIR = os.path.join("src", "Code", "bert_emotion_model")
+DATA_PATH =  "src/preprocessing/data_cleaned/full_labeled_poetry_dataset.csv"
+
+MODEL_DIR = "src/Code/bert_emotion_model"
 
 # --- Load Dataset ---
 if os.path.exists(DATA_PATH):
